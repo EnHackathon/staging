@@ -10,18 +10,23 @@
 
 3. Write your blog post:
 
-   1. You must include a set of metadata at the top of the file in a specific format.
+   1. You must include some YAML metadata at the top of the file.
       - Copy the format used on one of the existing blog posts - the metadata is the lines between the two "---" lines.
-
       - Specify the author, date, title, and optionally the email address of the author for the post. This data will be used on the published post and for displaying it on the blog home page.
+      - Make sure to keep the "layout: post" field.
 
-      - Make sure to keep the "layout: post" piece of metadata.
-
-   2. Write and add formatting to the content of your post using the markdown markup language.
+   2. Format the content of your post using markdown formatting (specifically the 'kramdown' variant).
 
       You can find a guide for the version of markdown used for the blog at https://kramdown.gettalong.org/quickref.html
 
-      If you're working in VS Code, you can preview markdown out-of-the-box side-by-side with your writing.
+      In many IDEs (including VS Code) it is possible to preview markdown side-by-side with the text version you edit.
+
+   3. Suggest to write about the following:
+      - What you learnt during the day
+      - What you found enjoyable/difficult/tedious/confusing
+      - Resources you used/found useful
+      - Thoughts for elements of the process that are good/could be better (+ suggestions)
+      - What you've achieved, what you'd like to achieve and how achievable you feel it is (compared to yesterday)
 
 4. When you're satisfied with your post, commit and push it to the master branch of the staging repo.
 
@@ -31,4 +36,4 @@
 
    Make any edits you want to your post, and commit and push them.
 
-5. During the EnHackathon, new posts from the staging area of the blog will be released to the main blog regularly.
+5. During EnHackathon, new posts from the staging area of the blog will be released to the main blog regularly.
