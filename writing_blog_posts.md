@@ -19,7 +19,7 @@
 
    2. Write and add formatting to the content of your post using the markdown markup language.
 
-      You can find a cheatsheet for markdown at https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet.
+      You can find a cheatsheet for markdown at https://kramdown.gettalong.org/quickref.html
 
       If you're working in VS Code, you can preview markdown out-of-the-box side-by-side with your writing.
 
