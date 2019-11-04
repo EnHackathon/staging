@@ -6,7 +6,7 @@
 
 2. To add a new post to the blog, create a new .md file in the _posts directory of your local copy of the repository.
 
-   The filename should be "YYYY-MM-DD-title.md". The title in the filename is not used in the blog post.
+   The filename should be "YYYY-MM-DD-NameSurname.md".
 
 3. Write your blog post:
 
@@ -17,7 +17,7 @@
 
       - Make sure to keep the "layout: post" piece of metadata.
 
-   2. Write and add formatting to the content of your post using the markdown markup language.s
+   2. Write and add formatting to the content of your post using the markdown markup language.
 
       You can find a cheatsheet for markdown at https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet.
 
