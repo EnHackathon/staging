@@ -17,7 +17,7 @@ Python.
 will involve copying how they're implemented???
 
 My aim for the first day was to come up with a plan for the work needed to
-implement this change. Dividing it into tasks with could potentially be
+implement this change. Dividing it into tasks which could potentially be
 addressed by different people next week.
 
 ## First Steps
@@ -58,9 +58,9 @@ Fairly late in the day I came across
 helped clear things up somewhat.
 
 PyCStructTypeType is a meta type/class. Creating a new class using it as a
-metaclass will call the constructor PyCStructTypenew. Which replaces the Types
-Dict member with a new instance of StgDict(a dictionary subclass, containing 
-additional C accessible fields)
+metaclass will call the constructor PyCStructTypenew, which replaces the Types
+Dict member with a new instance of StgDict (a dictionary subclass, containing 
+additional C accessible fields).
 
 Both contructors PyCStructTypenew and UnionTypenew call into the same common
 constructor StructUnionTypenew. A flag is passed to indicate if it's a

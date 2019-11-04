@@ -13,7 +13,7 @@ Today was my first day of `EnHackathon`, and although I was busy in the morning 
 
 ### Bug in re module
 
-Ben had found [Issue 23692](https://bugs.python.org/issue23692) on BPO, which looked interesting and like there hadn't been much progress made so far.
+Lewis had found [Issue 23692](https://bugs.python.org/issue23692) on BPO, which looked interesting and like there hadn't been much progress made so far.
 
 This bug concerned `re.match()` not matching certain patterns when it should, due to a feature designed to prevent infinite iterations for non-matching groups. This was causing inconsistent behaviour such as
 
