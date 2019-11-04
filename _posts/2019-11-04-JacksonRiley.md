@@ -6,7 +6,7 @@ author: Jackson Riley
 ---
 
 
-Today was my first day of `EnHackathon`, and although I was busy in the morning I was able to get started properly after lunch. Not a great amount of progress was made but a few nibbles have been had.
+Today was my first day of `EnHackathon`, and although I was otherwise engaged in the morning I was able to get started properly after lunch. Not a great amount of progress was made but a few nibbles have been had.
 
 
 ## What I did
@@ -40,17 +40,26 @@ Unfortunately, this means that the second pattern does not match, as after the f
 
 ```python
 >>> import re
->>> re.match('(?:()|(?(1)()|z)){0,2}(?(2)a|z)', 'z')
-<re.Match object; span=(0, 1), match='z'>
+>>> re.match('(?:()|(?(1)()|z)){0,2}(?(2)a|b)', 'b')
+<re.Match object; span=(0, 1), match='b'>
 ```
 
 This does not however (in my estimation) explain the following behaviour
 
 ```python
 >>> import re
->>> re.match('(?:()|(?(1)()|z)){0,2}(?(2)a|z)', 'z')
-<re.Match object; span=(0, 1), match='z'>
+>>> re.match('(?:()|(?(1)()|z)){1,2}(?(2)a|z)', 'a')
+<re.Match object; span=(0, 1), match='a'>
 ```
 
-WIP WIP WIP WIP WIP
+I would have expected this to have not matched for the same reason as the `{0,2}` case. Obviously something in my understanding is incorrect, so I'm looking forward to working out what that is when I get a chance!
+
+In any case, after it was pointed out to me that 'the regex module' referred to [regex](https://pypi.org/project/regex/) rather than [re](https://docs.python.org/3/library/re.html), I was able to have a poke around in the code and identify a few places that would be relevant for a fix - the current plan is to stop iterating if
+- the match position has not been advanced (current) **AND**
+- no groups have changed (proposed)
+
+
+### Collections.ABC docstrings
+
+[Issue 17306](https://bugs.python.org/issue17306) covers adding better docstrings to the Abstract Base Classes in [`collections.abc`](https://docs.python.org/3/library/collections.abc.html)
 
