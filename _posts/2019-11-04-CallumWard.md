@@ -65,14 +65,14 @@ behaviour): the exact need is [documented on the
 `devguide`](https://devguide.python.org/committing/#what-s-new-and-news-entries).
 
 The process is a little confusing, but essentially:
-- Click on the `Details` tab of the `bevedere/news-bot` CI
+- Click on the `Details` tab of the `bedevere/news` bot checks item
 - Sign in to GitHub for `blurb-it`, and give it access to your
-  `<username/cpython` fork
+  `<username>/cpython` fork (or all repositories, if you really want)
 - Write your blurb and fill in the BPO and PR info: as suggested, don't use the
   BPO number or PR number in the blurb as it appears in the `NEWS.d` entry
   filename 
 - It generates a file and adds it to your PR, which should trigger the
-  `beverdere/news-bot` to re-check and mark the check as passed
+  `bedevere/news` bot to re-check and mark the check as passed
 
 By the end of the day, a maintainer had commented on the post to suggest some
 changes, and I'm currently working through resolving what the changes should be
