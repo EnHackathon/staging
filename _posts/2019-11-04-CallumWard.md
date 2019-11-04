@@ -17,7 +17,7 @@ make at least a dent into giving back to CPython.
 
 I started out by looking for issues on [BPO, Python's bug
 tracker](bugs.python.org) which were marked with the `newcomer-friendly`
-keyword, as they as issues specifically marked out by maintainers as attainable
+keyword, as they are issues specifically marked out by maintainers as attainable
 first contributions.
 
 I got a bit of luck, as almost all of the current `newcomer-friendly` issues had
@@ -39,7 +39,7 @@ with a bit of the internal state of the class.
 Once I had made the change, I needed to add some tests: the best thing to do for
 this is to look under `Lib/test` for the overall module you're contributing to
 and `grep` for the name of key methods or functions around those you're adding
-to to find existing tests. The alternative if the tests are well layed out is to
+to to find existing tests. The alternative if the tests are well laid out is to
 look for the file which tests the specific module you're contributing to: for
 me, that was `unix_events <=> test_unix_events` (as is conventional).
 
@@ -77,12 +77,12 @@ The process is a little confusing, but essentially:
 By the end of the day, a maintainer had commented on the post to suggest some
 changes, and I'm currently working through resolving what the changes should be
 and making them. However, now that the PR is raised and all the hurdles from the
-CI are finished, I expected the rest of the fix to be the familiar coding and
+CI are finished, I expect the rest of the fix to be the familiar coding and
 reviewing cycle(s).
 
 ## Conclusions
 
-- Whilst the process of opening can feel a bit daunting, it is quite rewarding
+- Whilst the process of opening PRs can feel a bit daunting, it is quite rewarding
   once the PR exists and feels headed for merge.
 - Finding an issue can be tricky, but commenting on issues that seem to have
   stalled or looking for `newcomer-friendly` tags are good ways to get started.
