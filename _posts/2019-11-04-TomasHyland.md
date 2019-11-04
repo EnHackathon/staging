@@ -11,9 +11,9 @@ I stumbled across the following issue when looking through the bugtracker.
 
 It seemed like a fairly approachable issue for a couple of reasons.
 
-1) It was within the ctypes module, and I'm more experienced with C than
+1. It was within the ctypes module, and I'm more experienced with C than
 python.
-2) Big and Little Endian structures already exist, so surely most of the work
+2. Big and Little Endian structures already exist, so surely most of the work
 will involve copying how they're implemented???
 
 My aim for the first day was to come up with a plan for the work needed to
@@ -45,10 +45,10 @@ The main thing to get my head around intially was the distinction
 between all of the TypeTypes and Types defined within this module.
 
 There were the following:
-UnionType
-UnionTypeType
-StructType
-PyCStructTypeType
+* UnionType
+* UnionTypeType
+* StructType
+* PyCStructTypeType
 
 It still isn't clear to me why StructTypeType is prefixed by PyC, UnionTypeType
 seems to be the only TypeType without this prefix. (E.g. PyCArrayTypeTYpe)
@@ -68,8 +68,8 @@ structure or a union. I think the key to figuring out what changes are needed
 will be understanding how this constructor works.a
 
 Other areas that need further investigation are:
-    StructUnionTypeparamfunc: Also shared between both types
-    The setattro functions: PyCStructTypesetattro and UniontTypesetattro
+* StructUnionTypeparamfunc: Also shared between both types
+* The setattro functions: PyCStructTypesetattro and UniontTypesetattro
 
 ## Next Time
 
