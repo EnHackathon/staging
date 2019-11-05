@@ -32,7 +32,7 @@ The first pattern matches because:
  - The second time through, the first group has captured so we preferentially check the if clause, which matches. Again however, the match position is not advanced.
  - Then we get to the last if clause, `(?(2)a|z)`, which matches `a` if the second group captured and `z` otherwise. The second group captured, so we match `a` and the whole pattern matches.
 
-The only difference in the second pattern is the change from `{2}` to `{0,2}`, which, theoreticaly, shouldn't affect anything, as this `{0,2}` matches the preceding pattern *greedily*, so should go through two iterations.
+The only difference in the second pattern is the change from `{2}` to `{0,2}`, which, theoretically, shouldn't affect anything, as this `{0,2}` matches the preceding pattern *greedily*, so should go through two iterations.
 
 However, it seems that somewhere in the `re` module, there is some checking to avoid `(?:)*` type cases. Here, on each iteration of the `*`, the match position wouldn't advance, so we would keep matching forever (not ideal). It has been proposed (I haven't verified this yet) that the way `re` solves this is to stop the `*` if we haven't advanced.
 
