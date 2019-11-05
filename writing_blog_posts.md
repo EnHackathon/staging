@@ -20,6 +20,7 @@
       You can find a guide for the version of markdown used for the blog at https://kramdown.gettalong.org/quickref.html
 
       In many IDEs (including VS Code) it is possible to preview markdown side-by-side with the text version you edit.
+      In VS Code, this can be done with `Ctrl-K V`.
 
    3. Suggest to write about the following:
       - What you learnt during the day
