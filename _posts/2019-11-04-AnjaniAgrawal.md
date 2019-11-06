@@ -5,14 +5,14 @@ date:   2019-11-04
 author: Anjani Agrawal
 ---
 
-Today I attempted to contribute to Python open source code as part of Enhackathon. On the whole, it was a very rewarding and enjoyable experience. Not only did I gain some insight into the process of contributing to Python open source code but also made my first ever contribution! :D
+Today I attempted to contribute to Python open source code as part of Enhackathon. On the whole, it was a very rewarding and enjoyable experience. Not only did I gain some insight into the process of contributing to Python open source code but also made my first ever contribution!
 
 
 ## Getting started
 
 I had initially set things up to work on a remote server after going through the Python developer guide. However, I soon realised that setting things locally on the laptop would make editing files much simpler and ultimately save time in the long run. So I went through the steps again to set things up locally. There were some missing package dependencies on my laptop and some other minor issues which needed to be resolved in order to be able to build Python. Apart from that, the rest of the setup was mostly straightforward.
 
-# Looking for suitable issues and first PR
+## Looking for suitable issues and first PR
 
 The next task was to look through issues on the Python bug tracker and try to find a suitable one to work on. I tried looking at different areas of Python and filtering on tags such as 'newcomer-friendly' or 'easy'. In the end, I ended up picking a simple issue, tagged 'newcomer-friendly', which needed a small change to existing documentation for Python 3.8 and 3.9. After doing the required change, I committed and pushed to my repository. I opened a pull request so that the change could be approved and made my first small contribution to CPython! As mentioned in other posts, the steps to open a pull request and the associated requirements are all very well documented, so you shouldn't be afraid of anything!
 
