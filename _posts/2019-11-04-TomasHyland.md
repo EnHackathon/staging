@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Big and Little EndianUnions: Getting Started"
+title:  "Big and Little Endian Unions: Getting Started"
 date:   2019-11-04
 author: Tomas Hyland
 ---
@@ -12,12 +12,12 @@ I stumbled across the following issue when looking through the bugtracker.
 It seemed like a fairly approachable issue for a couple of reasons.
 
 1. It was within the ctypes module, and I'm more experienced with C than
-python.
+Python.
 2. Big and Little Endian structures already exist, so surely most of the work
 will involve copying how they're implemented???
 
 My aim for the first day was to come up with a plan for the work needed to
-implement this change. Dividing it into tasks with could potentially be
+implement this change. Dividing it into tasks which could potentially be
 addressed by different people next week.
 
 ## First Steps
@@ -25,23 +25,23 @@ addressed by different people next week.
 I thought the best way to get up to speed was to understand how the existing
 Big and Little Endian stuctures were implemented.
 
-Unfortunatley grepping for obvious references within the Module/cytpes
+Unfortunately grepping for obvious references within the Modules/ctypes
 directory (where the C code lives) didn't yield anything useful.
 
-I decided to take a look at /Lib/ctypes (where the Python code lives) instead.
+I decided to take a look at Lib/ctypes (where the Python code lives) instead.
 This was a lot more fruitful. It didn't take long to come up a plan for what
-was needed on the Python side. 
+was needed on the Python side.
 
 ## Struggles with TypesTypes and Types 
 
 So having made good progress on the Python side, I took another look at the
-Module/cyptes code to see if I could figure out how things worked.
+Modules/ctypes code to see if I could figure out how things worked.
 
-My assumption is that changes would be needed to the C code, however what those
-would be did not seem obvious when reading through! It even seemed possilble
+My assumption was that changes would be needed to the C code, however what those
+would be did not seem obvious when reading through! It even seemed possible
 that things could just work without any changes!???
 
-The main thing to get my head around intially was the distinction
+The main thing to get my head around initially was the distinction
 between all of the TypeTypes and Types defined within this module.
 
 There were the following:
@@ -51,21 +51,21 @@ There were the following:
 * PyCStructTypeType
 
 It still isn't clear to me why StructTypeType is prefixed by PyC, UnionTypeType
-seems to be the only TypeType without this prefix. (E.g. PyCArrayTypeTYpe)
+seems to be the only TypeType without this prefix (e.g. PyCArrayTypeTYpe).
 
 Fairly late in the day I came across
-h [the types docs](https://docs.python.org/3/c-api/type.html#c).PyTypeObject which has helped clear
-things up somewhat.
+[the types docs](https://docs.python.org/3/c-api/type.html#c.PyTypeObject) which
+helped clear things up somewhat.
 
 PyCStructTypeType is a meta type/class. Creating a new class using it as a
-metaclass will call the constructor PyCStructTypenew. Which replaces the Types
-Dict member with a new instance of StgDict(a dictionary subclass, containing 
-additional C accessible fields)
+metaclass will call the constructor PyCStructTypenew, which replaces the Types
+Dict member with a new instance of StgDict (a dictionary subclass, containing 
+additional C accessible fields).
 
 Both contructors PyCStructTypenew and UnionTypenew call into the same common
 constructor StructUnionTypenew. A flag is passed to indicate if it's a
 structure or a union. I think the key to figuring out what changes are needed
-will be understanding how this constructor works.a
+will be understanding how this constructor works.
 
 Other areas that need further investigation are:
 * StructUnionTypeparamfunc: Also shared between both types
