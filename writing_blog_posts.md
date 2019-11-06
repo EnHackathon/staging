@@ -2,13 +2,13 @@
 title: Writing blog posts
 ---
 
-1. Clone the git repository at https://github.com/EnHackathon/staging locally.
+1. Clone the git repository at `git@github.com:EnHackathon/staging` locally.
 
    Make sure you've been added as a collaborator with write permission by Lewis or Alex.
 
 2. To add a new post to the blog, create a new .md file in the _posts directory of your local copy of the repository.
 
-   The filename should be "YYYY-MM-DD-NameSurname.md".
+   The filename should be "YYYY-MM-DD-NameSurname.md" (this is used to create the URL).
 
 3. Write your blog post:
 
@@ -33,7 +33,7 @@ title: Writing blog posts
 
 4. When you're satisfied with your post, commit and push it to the master branch of the staging repo.
 
-   Visit https://enhackathon.github.io/staging, the staging area for the blog.
+   Visit <https://enhackathon.github.io/staging>, the staging area for the blog.
 
    Check that your new post appears as you expect it to on the front page, and read your post. Check the formatting (and any emojis...) appear as expected. 
 
