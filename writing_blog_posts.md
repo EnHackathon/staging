@@ -1,4 +1,6 @@
-# Writing EnHackathon blog posts
+---
+title: Writing blog posts
+---
 
 1. Clone the git repository at https://github.com/EnHackathon/staging locally.
 
