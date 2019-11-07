@@ -21,9 +21,9 @@ After raising the PR, I went back to looking for more issues to work on. I start
 
 ## Conclusions
 
--Picking an issue can be the trickiest part, filtering by tag or area of interest is a good starting point.
--While it may seem dauting, there is plenty of documentation as well as support from the community, so do feel free to ask for help when stuck!
--It is very rewarding when you finally get to the stage of opening a PR!
--I really enjoyed working on this today and very much look forward to resuming my work on the overflow error issue as well as looking at other issues next week! 
+- Picking an issue can be the trickiest part, filtering by tag or area of interest is a good starting point.
+- While it may seem dauting, there is plenty of documentation as well as support from the community, so do feel free to ask for help when stuck!
+- It is very rewarding when you finally get to the stage of opening a PR!
+- I really enjoyed working on this today and very much look forward to resuming my work on the overflow error issue as well as looking at other issues next week! 
 
 
