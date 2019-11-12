@@ -8,7 +8,7 @@ author: Callum Ward
 On the second day of `EnHackathon`, I continued to work on the outstanding item
 from my last blog post on `asyncio` contribution.
 
-After I submitted the pull request for [bpo-38314](bugs.python.org/issue38314),
+After I submitted the pull request for [bpo-38314](https://bugs.python.org/issue38314),
 I was told by the maintainer that `asyncio` is trying to transition from using
 primarily `unittest.mock` based testing to more functional style testing, which
 verifies the behaviour as the user would see it.
@@ -54,7 +54,7 @@ of the pipe to the loop, you're given back an object which represents the
 `transport`.
 
 The `transport` object provides methods to pause/resume reading, or in the case
-of [bpo-38314](bugs.python.org/issue38314) a new method `is_reading()` to check
+of [bpo-38314](https://bugs.python.org/issue38314) a new method `is_reading()` to check
 it it is actually able to read data across the pipe.
 
 ## Mistakes

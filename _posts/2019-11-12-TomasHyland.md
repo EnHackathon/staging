@@ -19,7 +19,7 @@ Anjani was finishing off an unrelated issue during the morning.
 I was finally able to find a place where the C code needs to be changed! This
 took me a lot longer than expected. In general I think the documentation is
 quite lacking and the only way to figure out how things worked was to read the
-code, which proved quite slow going. The functionality I was interested
+code, which proved quite slow going. The functionality I was interested in
 required following a long code path.
 
 The key breakthrough came when comparing the setattro functions of
@@ -32,14 +32,14 @@ Alert" which is a little worrying. But reading through it revealed some changes
 we'll need to make. One of the key areas is pep-3188, in particular ensuring
 that Unions also specify the structured format data string. 
 
-By this time Anjani was ready to help out, so I asked here to take a look at
+By this time Anjani was ready to help out, so I asked her to take a look at
 this function in more detail and make the necessary changes.
 
 
 ## Understanding the rest of the C code
 
-Even though I've found were some of the key code lives. I'm still not sure how
-the rest of the code fits together, there is still a fair amount of
+Even though I've found where some of the key code lives I'm still not sure how
+the rest of the code fits together - there is still a fair amount of
 investigation work to do. 
 
 I'm currently looking into why UnionTypesetattro uses PyObjectGenericSetAttr
