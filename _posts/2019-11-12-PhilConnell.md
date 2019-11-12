@@ -52,7 +52,7 @@ functions.
 To help us navigate this, I summarised the key bits visually as a point of
 reference:
 
-![Runtime state objects](PhilConnell_runtime-state.jpg "CPython runtime state objects")
+![Runtime state objects]({{ "/images/2019-11-12-PhilConnell_runtime-state.jpg" | relative_url }} "CPython runtime state objects")
 
 ### Subprocess Calls In Subinterpreters
 
@@ -73,7 +73,7 @@ hoped to come to this conclusion!
   all of the Python runtime state).
 
 - The only exception to this is if the (legacy) `preexec_fn` parameter of
-  `Popen` is used: this is the only wqay that Python code can be executed after
+  `Popen` is used: this is the only way that Python code can be executed after
   fork but before exec. So if we ban that, everything is ok!
 
 ### Conclusion
