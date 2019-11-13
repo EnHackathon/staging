@@ -29,7 +29,7 @@ I raised pull requests for a couple of small issues:
 - <https://bugs.python.org/issue15243>  
 	Adding clarification in the documentation that `__prepare__` should be implemented as a classmethod.
 
-These issues were quickly reviewed by Brant, and at the time of writing are awaiting a core review and merge.
+These issues were quickly reviewed by Brandt, and at the time of writing are awaiting a core review and merge.
 
 I've also started some work on a couple more issues found during my searching:
 - <https://bugs.python.org/issue25866>  
@@ -39,7 +39,7 @@ I've also started some work on a couple more issues found during my searching:
 
     This has some non-trivial things to work out. The exact notation to be used needs to be decided, and it will require careful testing.
 
-    I find the idea of doing a visible enhancement like this very appealing, so again I plan to create an up to date patch.  
+    I find the idea of doing a visible enhancement like this very appealing, so again I plan to create an up-to-date patch.
 
 ## Next time on EnHackathon
 
