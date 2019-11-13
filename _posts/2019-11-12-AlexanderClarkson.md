@@ -11,7 +11,7 @@ I spent time hunting on [Python's bug tracker](https://bugs.python.org/) for sui
  - Issues with a small, quick fix to get used to the contribution workflow, and
  - "Interesting" issues which caught my eye for some other reason.
 
-The bug tracker can seem opaque at first. At a first glance it looks like issues are either already being worked on, or have been long forgotten after some initial discussion.
+The bug tracker can seem opaque at first. At a first glance, it looks like issues are either already being worked on or have been long forgotten after some initial discussion.
 
 I started by filtering for newcomer-friendly issues, and just kept scrolling back until I found something.
 
@@ -21,7 +21,7 @@ It looks like the best thing to do (unless you stumble upon a new issue in the w
 
 ## Experience of First Contributions
 
-After finding issues to work on, making a first contribution was comparitavely the easy part - the workflow is standard and [well documented](https://devguide.python.org/).
+After finding issues to work on, making a first contribution was comparatively the easy part - the workflow is standard and [well documented](https://devguide.python.org/).
 
 I raised pull requests for a couple of small issues:
 - <https://bugs.python.org/issue9495>  
@@ -37,13 +37,13 @@ I've also started some work on a couple more issues found during my searching:
 - <https://bugs.python.org/issue11354>  
 	This is a more exciting one :smile:. This involves enhancing argparse to allow specifying that an argument should accept a fixed range of number of values, without the need for post-processing in your script.
 
-    This has a some non-trivial things to work out. The exact notation to be used needs to be decided, and it will require careful testing.
+    This has some non-trivial things to work out. The exact notation to be used needs to be decided, and it will require careful testing.
 
     I find the idea of doing a visible enhancement like this very appealing, so again I plan to create an up to date patch.  
 
 ## Next time on EnHackathon
 
-Fingers crossed, my two pull requests will be merged and I will have made a small but non-zero contribution to CPython.
+Fingers crossed, my two pull requests will be merged, and I will have made a small but non-zero contribution to CPython.
 
 I'll also continue work on the other two issues.
 
