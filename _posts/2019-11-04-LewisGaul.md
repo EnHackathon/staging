@@ -61,7 +61,7 @@ There were two regex issues I commented on last time that are still of interest 
 - <https://bugs.python.org/issue22491>  
 	This issue is an enhancement to support all unicode line boundaries in regular expressions (rather than only '\n'). I posted asking for some guidance last time, thinking it might be suitable for a small EnHackathon team. However, I haven't yet had a response. I'm not sure if this is a matter of needing to be patient, or whether there's something that can be done to get the attention of the right person...
 - <https://bugs.python.org/issue23692>  
-	This issue highlights a seemingly very obscure limitation/bug in the `re` module (which is addressed in the third-party `regex` module). I hadn't realised its complexity when I suggested to Jackson he might like to investigate it further! See [his blog post](../JacksonRiley.html) for more insight!
+	This issue highlights a seemingly very obscure limitation/bug in the `re` module (which is addressed in the third-party `regex` module). I hadn't realised its complexity when I suggested to Jackson he might like to investigate it further! See [his blog post](JacksonRiley.html) for more insight!
 
 
 

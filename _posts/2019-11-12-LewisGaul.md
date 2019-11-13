@@ -17,9 +17,9 @@ our group up to 9 people.
 ## Subinterpreters Continued
 
 I spent the day continuing progress on the two subinterpreter issues I was
-looking at [last time](../04/LewisGaul.md). It was great to have Phil on board
+looking at [last time](../04/LewisGaul.html). It was great to have Phil on board
 looking into the other issues I mentioned last time (check out
-[his blog post](PhilConnell.md)), and also great to have Ben helping me out
+[his blog post](PhilConnell.html)), and also great to have Ben helping me out
 towards the end of the day.
 
 
