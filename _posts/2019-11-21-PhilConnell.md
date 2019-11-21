@@ -65,7 +65,7 @@ Thread 1 (LWP 100922):
 Thread 2 is the main thread, and has just finalized the interpreter and called
 `exit()`:
 
-```c_cpp
+```c
 void _Py_NO_RETURN
 Py_Exit(int sts)
 {
@@ -80,7 +80,7 @@ Py_Exit(int sts)
 Thread 1 is the villain of our story -- it has just finished a blocking
 `write()` call and so decided to reacquire the GIL:
 
-```c_cpp
+```c
 _Py_write_impl(int fd, const void *buf, size_t count, int gil_held)
 {
     ...
@@ -128,7 +128,7 @@ baseline race condition that's simply made (more) likely. Can we reproduce it?
 Some hacking about later (and after **much** relearning of how to embed
 Python...) I eventually came up with some crashing code (hurrah :)):
 
-```c_cpp
+```c
 #include <assert.h>
 #include <pthread.h>
 #include <time.h>
@@ -253,7 +253,7 @@ behaviour in general) is by adding a layer of indirection. My patch on [issue
 pointer in a structure with references in both directions between the wrapper
 and threadstate:
 
-```c_cpp
+```c
 // The PyThreadState typedef is in Include/pystate.h.
 struct _ts {
     ...
