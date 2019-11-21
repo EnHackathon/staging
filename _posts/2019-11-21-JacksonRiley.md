@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  "WIPWIPWIPWIPWIPWIPWIP"
+title:  "PRogress"
 date:   2019-11-21
 author: Jackson Riley
 email:  jackson.riley@btinternet.com
 ---
 
 
-Not one, dear reader, but *two* pull requests were submitted today. What a rush.
+Not one, dear reader, not two, but *three* pull requests were submitted today. What a rush.
 
 
 ## What I did
@@ -49,7 +49,13 @@ For instance, `m.__eq__(other)` checks by default for object identity: if `m` an
 
 Nice!
 
-A few updates to the `unittest.mock` tests later, I was able to WIPWIPWIP
+A few updates to the `unittest.mock` tests later, I was able to confirm that I hadn't broken anything and raise a pull request. I haven't had any activity on this yet but will hopefully do so at some point.
+
+### Removing asyncore from tests
+
+[`asyncore`](https://docs.python.org/3/library/asyncore.html) was one of the modules used in Python to implement asynchronous behaviour before [`asyncio`](https://docs.python.org/3/library/asyncio.html) came along, and has been deprecated since Python 3.6, but is still used in some tests. [Issue 28533](https://bugs.python.org/issue28533) covers removing these mentions and reimplementing the internals of a handful of test files using `asyncio`.
+
+This issue was recommended to be broken into subissues for each test file in question, so spotting a trivial one I could get done before heading home, I raised [Issue 38866](https://bugs.python.org/issue38866) and removed a mention from the [`pyclbr`](https://docs.python.org/3/library/pyclbr.html) test file. Third PR raised, and it's since been reviewed! I'll probably work on some other test files next time.
 
 ## Thoughts
-
+I think my third day of contribution went pretty well, it felt great to get some PRs raised - hopefully these don't end up blocked on review. I think I'll keep looking out for issues to work on before next time, because I spent a non-zero percentage of the day looking for issues, which is not the most efficient use of time. Still enjoying and feeling good about everything!
