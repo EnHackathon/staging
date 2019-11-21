@@ -16,7 +16,7 @@ Not one, dear reader, but *two* pull requests were submitted today. What a rush.
 
 [Issue 17306](https://bugs.python.org/issue17306) covers adding better docstrings to the Abstract Base Classes in [`collections.abc`](https://docs.python.org/3/library/collections.abc.html).
 
-I hadn't had any comments on my patch that I posted to the bpo thread last week, so I went ahead and submitted a pull request. Ii think this was the right thing to do, and hopefully it'll get a review before my next day of `EnHackathon`.
+I hadn't had any comments on my patch that I posted to the bpo thread last week, so I went ahead and submitted a pull request. I think this was the right thing to do, and hopefully it'll get a review before my next day of `EnHackathon`.
 
 ### MagicMock and divmod
 
