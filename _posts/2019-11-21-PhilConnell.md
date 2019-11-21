@@ -25,7 +25,7 @@ So the first obvious question was: had anyone provided a core+symbols, or
 decoded backtraces?
 
 Luckily, on one of the linked issues [Victor Stinner had
-provided](https://bugs.python.org/issue36114#msg337090) exactly that:
+posted exactly that](https://bugs.python.org/issue36114#msg337090):
 
 ```
 Thread 2 (LWP 101669):
@@ -65,7 +65,7 @@ Thread 1 (LWP 100922):
 Thread 2 is the main thread, and has just finalized the interpreter and called
 `exit()`:
 
-```C
+```c_cpp
 void _Py_NO_RETURN
 Py_Exit(int sts)
 {
@@ -80,7 +80,7 @@ Py_Exit(int sts)
 Thread 1 is the villain of our story -- it has just finished a blocking
 `write()` call and so decided to reacquire the GIL:
 
-```C
+```c_cpp
 _Py_write_impl(int fd, const void *buf, size_t count, int gil_held)
 {
     ...
@@ -128,7 +128,7 @@ baseline race condition that's simply made (more) likely. Can we reproduce it?
 Some hacking about later (and after **much** relearning of how to embed
 Python...) I eventually came up with some crashing code (hurrah :)):
 
-```C
+```c_cpp
 #include <assert.h>
 #include <pthread.h>
 #include <time.h>
@@ -253,7 +253,7 @@ behaviour in general) is by adding a layer of indirection. My patch on [issue
 pointer in a structure with references in both directions between the wrapper
 and threadstate:
 
-```C
+```c_cpp
 // The PyThreadState typedef is in Include/pystate.h.
 struct _ts {
     ...
@@ -280,7 +280,6 @@ There are a few of these! I'm particularly interested in what the others on
 
 1. Is this an acceptable change in general? (For what it's worth, I don't see
    an obvious alternative!)
-
 2. What's needed to productize the patch? There are a couple of standout things
    for me:
     - There's one race condition that still needs to be fixed (what happens if
@@ -288,7 +287,6 @@ There are a few of these! I'm particularly interested in what the others on
       acquire the GIL?)
     - What's the best approach for adding tests for this case that can be
       maintained long-term?
-
 3. To what extent does this actually fix the problem exposed by Eric's pending
    calls changes? It certainly matches Victor's particular backtrace (and I'm
    fairly confident entirely addresses that instance) but are there other
