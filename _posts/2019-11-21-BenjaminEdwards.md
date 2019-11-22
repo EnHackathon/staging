@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "EnHackathon - Whipping Subinterpreters into shape"
-date:   2019-11-22
+date:   2019-11-21
 author: Benjamin Edwards
 ---
 
