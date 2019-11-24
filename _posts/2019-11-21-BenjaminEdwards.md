@@ -5,7 +5,7 @@ date:   2019-11-21
 author: Benjamin Edwards
 ---
 
-Over the past couple of days I have been busy completing the markups to my Pull Request for my changes to [Get Type Hints]() and learning lots about subinterpreters (including that it's not subinterpretors). After helping Lewis debug and test his code for `channel_list_interpreters()` I set out to find another issue in the module to work on. 
+Over the past couple of days I have been busy completing the markups to my Pull Request for my changes to [Get Type Hints](https://bugs.python.org/issue37838) and learning lots about subinterpreters (including that it's not subinterpretors). After helping Lewis debug and test his code for `channel_list_interpreters()` I set out to find another issue in the module to work on. 
 
 
 # Threads vs Interpreters
