@@ -31,7 +31,7 @@ Beeware has several constituent projects, some of the relevant ones are:
 
 - [`colosseum`](https://github.com/beeware/colosseum): an implementation of the
   CSS specification for resolving positions and locations of elements on
-  a canvas, used by `togo` for styling applications
+  a canvas, used by `toga` for styling applications
 
 - [`voc`](https://github.com/beeware/voc): an implementation of the Python
   runtime in Java (like the one written in C for CPython) allowing Python to
@@ -83,5 +83,5 @@ already available to our team, designing and coding Python.
 
 After talking to some of the core devs on the
 [`gitter`](https://gitter.im/beeware/general), I'm somewhat hopeful that they'll
-be able to direct us at some work to be done, which might represents good group
+be able to direct us at some work to be done, which might represent good group
 projects for further contribution in the New Year.
